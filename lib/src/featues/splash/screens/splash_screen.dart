@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return core.BlocListener<SplashBloc, SplashState>(
       listener: (context, state) {
         if (state is SplashStateIsGoLogin) {
-          context.go(AuthRoutesPaths.start);
+          context.go(AuthRoutesPaths.login);
         }
       },
       child: Center(child: Text('Splash')),

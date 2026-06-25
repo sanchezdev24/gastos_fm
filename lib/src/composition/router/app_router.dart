@@ -25,7 +25,7 @@ class AppRouter {
       ),
 
       // ── Login (fuera del shell) ───────────────────────────────
-       ...featureModules.expand((f)=>f.routes()),
+      ...featureModules.expand((f) => f.routes()),
 
       // ── Shell con Bottom Nav ──────────────────────────────────
       StatefulShellRoute.indexedStack(
@@ -37,37 +37,37 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: DashboardRoutesPaths.dashboard,
-                builder: (context, state) => FullProfileScreen(),
+                builder: (context, state) => Container(),
               ),
             ],
           ),
 
-          // Tab 1 - 
+          // Tab 1 -
           StatefulShellBranch(
             routes: [
               GoRoute(
                 path: '/catalogue',
-                builder: (context, state) => Center(child: Text('Catalogos'),),
+                builder: (context, state) => Center(child: Text('Catalogos')),
               ),
             ],
           ),
 
-          // Tab 2 - 
+          // Tab 2 -
           StatefulShellBranch(
             routes: [
               GoRoute(
                 path: '/purchases',
-                builder: (context, state) => Center(child: Text('Mis Compras'),),
+                builder: (context, state) => Center(child: Text('Mis Compras')),
               ),
             ],
           ),
 
-          // Tab 3 - 
+          // Tab 3 -
           StatefulShellBranch(
             routes: [
               GoRoute(
                 path: '/profile',
-                builder: (context, state) => Center(child: Text('Profile'),),
+                builder: (context, state) => Center(child: Text('Profile')),
               ),
             ],
           ),
@@ -75,11 +75,12 @@ class AppRouter {
       ),
     ],
     observers: [it<RouteObserver<ModalRoute<void>>>()],
-    errorBuilder: (context, state) => ErrorScreen(errorMsg: state.error!.message),
-    redirect: _redirect
+    errorBuilder: (context, state) =>
+        ErrorScreen(errorMsg: state.error!.message),
+    redirect: _redirect,
   );
 
-   String? _redirect(BuildContext context, GoRouterState state) {
+  String? _redirect(BuildContext context, GoRouterState state) {
     return null;
   }
 }
