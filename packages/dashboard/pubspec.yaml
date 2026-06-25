@@ -12,9 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   core:
-    git:
-      url: https://github.com/sanchezdev24/core_mobile
-      ref: development
+    path: ../core
 
   design_system:
     path: ../design_system

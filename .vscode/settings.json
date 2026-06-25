@@ -3,11 +3,14 @@
   "editor.defaultFormatter": "Dart-Code.dart-code",
   "[dart]": {
     "editor.formatOnSave": true,
-    "editor.rulers": [80],
+    "editor.rulers": [
+      80
+    ],
     "editor.tabSize": 2
   },
   "dart.lineLength": 80,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
-  }
+  },
+  "dart.flutterSdkPath": ".fvm/versions/3.41.2"
 }

@@ -14,9 +14,7 @@ dependencies:
     sdk: flutter
 
   core:
-    git:
-      url: https://github.com/sanchezdev24/core_mobile
-      ref: development
+    path: packages/core
 
   auth:
     path: packages/auth
