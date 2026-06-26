@@ -1,13 +1,10 @@
-
 import 'package:core/core.dart';
+import 'package:dashboard/dashboard.dart';
+import 'package:dashboard/src/features/home/presentation/screens/home_screen.dart';
 
 final List<GoRoute> dashboardRoutes = [
- /* GoRoute(
-    path: DashboardRoutesPaths.dashboard,
-    builder: (context, state) => BlocProvider(
-      create: (_) => GetIt.I<DashboardBloc>()
-        ..add( DashboardLoadJobsEvent()),
-      child: const DashboardScreen(),
-    ),
-  ), */
+  GoRoute(
+    path: DashboardRoutesPaths.home,
+    builder: (context, state) => const HomeScreen(),
+  ),
 ];

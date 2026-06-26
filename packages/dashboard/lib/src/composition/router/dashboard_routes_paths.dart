@@ -1,3 +1,3 @@
 class DashboardRoutesPaths {
-  static const dashboard = "/dashboard";
+  static const home = "/home";
 }
