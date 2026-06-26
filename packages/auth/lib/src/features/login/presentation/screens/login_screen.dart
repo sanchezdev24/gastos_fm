@@ -1,8 +1,8 @@
+import 'package:core/core.dart' as core;
 import 'package:design_system/tokens/colors.dart';
 import 'package:design_system/tokens/spacing.dart';
 import 'package:design_system/tokens/typography.dart';
 import 'package:flutter/material.dart';
-import 'package:shadcn_ui/shadcn_ui.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -110,7 +110,7 @@ class _LoginCard extends StatelessWidget {
             style: AppTypography.labelCaps.copyWith(color: AppColors.onSurface),
           ),
           const SizedBox(height: AppSpacing.sm),
-          ShadInputFormField(placeholder: const Text('name@company.com')),
+          core.ShadInputFormField(placeholder: const Text('name@company.com')),
           const SizedBox(height: AppSpacing.md),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,7 +133,7 @@ class _LoginCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.sm),
-          ShadInputFormField(
+          core.ShadInputFormField(
             obscureText: obscurePassword,
             placeholder: const Text('••••••••'),
             trailing: GestureDetector(
@@ -151,8 +151,10 @@ class _LoginCard extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             height: 48,
-            child: ShadButton(
-              onPressed: () {},
+            child: core.ShadButton(
+              onPressed: () {
+                context.go('/home'); // Navigate to the home screen
+              },
               backgroundColor: AppColors.primary,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -36,7 +36,7 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: DashboardRoutesPaths.dashboard,
+                path: DashboardRoutesPaths.home,
                 builder: (context, state) => Container(),
               ),
             ],
