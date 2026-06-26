@@ -15,7 +15,6 @@ dependencies:
 
   core:
     path: packages/core
-
   auth:
     path: packages/auth
   dashboard:
