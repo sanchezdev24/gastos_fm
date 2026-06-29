@@ -11,10 +11,8 @@ class MockLoginRemoteDatasource implements LoginRemoteDatasource {
   @override
   Future<bool> makeLogin(LoginParams params) async {
     await Future.delayed(Duration(seconds: 5));
-    // throw UnexpectedFailure(code: '');
     return true;
   }
-  
 }
 
 class LoginRemoteDatasourceImpl implements LoginRemoteDatasource {
@@ -23,10 +21,9 @@ class LoginRemoteDatasourceImpl implements LoginRemoteDatasource {
   @override
   Future<bool> makeLogin(LoginParams params) async {
     final response = await dio.post(NetworkRoutes.login, data: params);
-    if(response.statusCode == 200) {
+    if (response.statusCode == 200) {
       return true;
     }
     throw UnexpectedFailure(code: response.statusCode.toString());
   }
-  
 }

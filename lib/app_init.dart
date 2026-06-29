@@ -11,9 +11,7 @@ class AppInit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final router = it<AppRouter>().router;
- final featureDelegates = featureModules
-        .expand((m) => m.delegates)
-        .toList();
+    final featureDelegates = featureModules.expand((m) => m.delegates).toList();
     return ShadApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
@@ -34,12 +32,9 @@ class AppInit extends StatelessWidget {
       themeMode: ThemeMode.system,
 
       // ── Localización ──────────────────────────────────────
-      supportedLocales: const [
-        Locale('es'),
-        Locale('en'),
-      ],
+      supportedLocales: const [Locale('es'), Locale('en')],
       localizationsDelegates: [
-        ...featureDelegates,                            // features
+        ...featureDelegates, // features
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
